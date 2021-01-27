@@ -17,10 +17,10 @@ for(속성명 in 반복할 대상) {
 - 내부 요소를 하나씩 순회할 때 마다, 각 요소의 Key 정보가 for in에서 정의 한 속성명으로 선언&할당 됨
 
 <details open>
-<summary>코드</summary>
+<summary>Code</summary>
 <div markdown="1">
 
-### 코드
+### Code
 // store 변수에 객체 값을 할당
 var store = {snake: 1000, flower: 5000, beverage: 2000};
 
