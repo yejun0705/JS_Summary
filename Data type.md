@@ -38,5 +38,6 @@
 - 모든 객체에 부모가 되는 객체
 - 이를 부모삼아 함수, 배열, 원시 자료형을 객체로 감싼 새로운 형태의 객체(String, Number, Boolean)와 특수 연산에 특화된 내장 객체(Math, JSON, RegEx) 그리고 Iterable, Collection 특성의 객체(Map, Set, WeakMap, WeakSet) 등의 표준 내장 객체가 존재
 
+
 </div>
 </details>
