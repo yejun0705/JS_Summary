@@ -4,6 +4,8 @@
 ---------------------------------------
 ## Object
 
+## 객체
+
 - 값들을 그룹으로 묶은 데이터 모음
 - 표현식으로 중괄호 { }를 사용
 - 중괄호 안에 여러 값을 넣을 수 있음
@@ -51,58 +53,37 @@
 
     → 대괄호 [ ] 안에 키 값을 문자열로 작성
 
-    -Code
-    ```jsx
-// 객체를 변수 obj에 대입
-var obj = {};
-
-for(var i = 0; i < 4; i++) {
-    // obj 객체에 속성을 추가, 속성명이 key0, key1, key2 ... 로 숫자가 증가되도록 정의
-    obj['key' + i] = i;
-}
-
-console.log(obj);
-
-// 변수 profile에 문자열 대입
-var profile = 'chloe:30';
-var person = {
-    // profile 문자열은 키값으로 하는 속성 정의 
-    [profile] : true,
-    // profile.split(":")은 문자 ':'을 중심으로 profile 문자열을 나눔
-    [profile.split(':')[0]] : profile.split(':')[1]
-};
-
-console.log(person);
-```
+    - code
 
 - 단축 속성명 기능을 활용하여 객체의 속성을 더 간단하게 정의할 수 있음 → { 변수명 }
 - 속성 계산명
 
     → 대괄호 [ ] 안에 식을 넣거나 변수를 대입하여 동적으로 객체 속성들을 생성 가능
 
-    - Code
-    ```jsx
-// 객체를 변수 obj에 대입
-var obj = {};
+    - code
 
-for(var i = 0; i < 4; i++) {
-    // obj 객체에 속성을 추가, 속성명이 key0, key1, key2 ... 로 숫자가 증가되도록 정의
-    obj['key' + i] = i;
-}
+        ```jsx
+        // 객체를 변수 obj에 대입
+        var obj = {};
 
-console.log(obj);
+        for(var i = 0; i < 4; i++) {
+            // obj 객체에 속성을 추가, 속성명이 key0, key1, key2 ... 로 숫자가 증가되도록 정의
+            obj['key' + i] = i;
+        }
 
-// 변수 profile에 문자열 대입
-var profile = 'chloe:30';
-var person = {
-    // profile 문자열은 키값으로 하는 속성 정의 
-    [profile] : true,
-    // profile.split(":")은 문자 ':'을 중심으로 profile 문자열을 나눔
-    [profile.split(':')[0]] : profile.split(':')[1]
-};
+        console.log(obj);
 
-console.log(person);
-```
+        // 변수 profile에 문자열 대입
+        var profile = 'chloe:30';
+        var person = {
+            // profile 문자열은 키값으로 하는 속성 정의 
+            [profile] : true,
+            // profile.split(":")은 문자 ':'을 중심으로 profile 문자열을 나눔
+            [profile.split(':')[0]] : profile.split(':')[1]
+        };
+
+        console.log(person);
+        ```
 
 - 비구조화 할당
 
@@ -110,24 +91,26 @@ console.log(person);
 
     → 객체 비구조화 할당, 중괄호 { } 안에 속성 이름을 넣어 객체의 여러 속성을 한 번에 가져올 수 있음
 
-    -Code
-    ```jsx
-var obj = {a : 1, b : 2, c : 30, d : 44, e : 5};
+    - code
 
-// 비구조화를 통해 속성 a, c 속성 값을 가져와 번수에 할당
-// 중괄호 안에 원하는 속성명을 넣으면 객체를 비구조화하여 해당 속성명에 따른 값을 각 변수에 할당
-var {a, c} = obj; // a = 1, c = 30
+        ```jsx
+        var obj = {a : 1, b : 2, c : 30, d : 44, e : 5};
 
-console.log(`a >>> ${a}`);
-console.log(`c >>> ${c}`);
+        // 비구조화를 통해 속성 a, c 속성 값을 가져와 번수에 할당
+        // 중괄호 안에 원하는 속성명을 넣으면 객체를 비구조화하여 해당 속성명에 따른 값을 각 변수에 할당
+        var {a, c} = obj; // a = 1, c = 30
 
-// 기존의 속성명을 가져와 새로운 변수명으로 할당하여 정의할 수 있음
-// 구분자 ':'를 사이에 두고 왼쪽에 객체의 속성명, 오른쪽에 새로운 변수명을 넣으면 됨
-// 또한 기본값을 설정 할 수 있음 
-// ex) a:newA = 10 -> a 속성값을 newA에 할당하되, undefined로 값이 없을 경우 기본값 10을 할당
-var {a : newA = 10, f : newF = 5} = obj;
+        console.log(`a >>> ${a}`);
+        console.log(`c >>> ${c}`);
 
-console.log(`newA >>> ${newA}`);
-console.log(`newF >>> ${newF}`);
-```
-}
+        // 기존의 속성명을 가져와 새로운 변수명으로 할당하여 정의할 수 있음
+        // 구분자 ':'를 사이에 두고 왼쪽에 객체의 속성명, 오른쪽에 새로운 변수명을 넣으면 됨
+        // 또한 기본값을 설정 할 수 있음 
+        // ex) a:newA = 10 -> a 속성값을 newA에 할당하되, undefined로 값이 없을 경우 기본값 10을 할당
+        var {a : newA = 10, f : newF = 5} = obj;
+
+        console.log(`newA >>> ${newA}`);
+        console.log(`newF >>> ${newF}`);
+        ```
+
+        - 배열 비구조화 할당은 중괄호 { }를 대괄호 [ ]로 바꾸면 가능
