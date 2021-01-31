@@ -2,7 +2,7 @@
 2021.01.29
 
 ---------------------------------------
-## Object - 객체
+## 객체
 
 - 값들을 그룹으로 묶은 데이터 모음
 - 표현식으로 중괄호 { }를 사용
@@ -52,6 +52,48 @@
     → 대괄호 [ ] 안에 키 값을 문자열로 작성
 
     - code
+
+        ```jsx
+        var family = {
+        	'address' : 'Seoul',
+        	members : {},
+        	addFamily : function(age, name, role) {
+        		this.members[role] = {
+        			age : age,
+        			name : name
+        		};
+        	},
+        	getHeadcount : function() {
+        		return Object.keys(this.members).length;
+        	}
+        };
+
+        family.addFamily(30, 'chloe', 'aunt');
+        family.addFamily(3, 'lyn', 'niece');
+        family.addFamily(10, 'dangdangi', 'dog');
+
+        var printMembers = function() {
+        	// family변수 객체의 members에 접근 -> 별도의 members변수 선언 후 해당 값 할당
+        	var members = family.members;
+        	for(role in members) {
+        		console.log('role => ' + role + ', name => ' + members[role].name + ', age => ' + members[role].age);  
+        	}
+        };
+
+        printMembers();
+
+        var members = family.members;
+        // 객체에 새로운 속성을 추가하는 방법
+        members['nephew'] = { age : 3, name : 'hyun' };
+        // 존재하는 속성 값을 수정
+        members.niece = { age : 5, name : 'lyn' };
+
+        // delete 키워드를 사용하여 객체의 특정 속성을 삭제
+        delete members.aunt;
+        delete members['dog'];
+
+        printMembers();
+        ```
 
 - 단축 속성명 기능을 활용하여 객체의 속성을 더 간단하게 정의할 수 있음 → { 변수명 }
 - 속성 계산명

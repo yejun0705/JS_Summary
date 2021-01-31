@@ -33,5 +33,5 @@ function 함수이름(매개변수) {
 
     - 함수 표현식에서 정의한 함수 이름은 해당 함수 안에서만 호출 가능
     - 선언된 함수가 매개변수를 필요로 하는 경우 소괄호 ( ) 안에 전달할 값을 나열
-    - arguments 객체
-    - 기본 매개변수(default parameter)
+    - [arguments 객체](https://www.notion.so/JavaScript-34fb7ba0b4924f8b8a12180451ac0f29#25a9cd0136db44f18471afe1fdba200f)
+    - [기본 매개변수(default parameter)](https://www.notion.so/JavaScript-34fb7ba0b4924f8b8a12180451ac0f29#2d0466257b71494b8b4f6a470b280f62)
