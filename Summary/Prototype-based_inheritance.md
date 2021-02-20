@@ -58,9 +58,3 @@
     const item2 = product_strorage2.get_data('id001');
     console.log(item2);
     ```
-
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2269b803-797e-4ebc-a8c0-bfeb698e1599/IMG_B0471448EE9A-1.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2269b803-797e-4ebc-a8c0-bfeb698e1599/IMG_B0471448EE9A-1.jpeg)
-
-    - 다음은 각 생성자 함수의 프로토타입이 연결된 형태를 보여줌
-
-    ![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b9c7b4f-4556-4e82-a64f-ab05ea478934/IMG_8F259A8715B2-1.jpeg](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1b9c7b4f-4556-4e82-a64f-ab05ea478934/IMG_8F259A8715B2-1.jpeg)
